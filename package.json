@@ -1,0 +1,27 @@
+{
+  "name": "010__redis_cluster_02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "restart": "rimraf built && yarn build && yarn start",
+    "build": "babel src --out-dir built",
+    "start": "node built/app.js",
+    "serve": "nodemon --exec yarn restart",
+    "seed:employees": "node ./scripts/seed-employees.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "ioredis": "^5.2.4",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "redis": "^4.5.0",
+    "rimraf": "^3.0.2"
+  }
+}
